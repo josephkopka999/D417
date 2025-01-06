@@ -1,0 +1,6 @@
+inventory
+[switches]
+
+[windows computers]
+
+[linux computers]
