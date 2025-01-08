@@ -1,0 +1,9 @@
+inventory
+[switches]
+LocalSwitch
+UserNetwork
+ITNetwork
+
+[windows computers]
+
+[linux computers]
