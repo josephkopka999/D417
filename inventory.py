@@ -31,10 +31,10 @@ def inventory():
 
   router_list = {}
   router_list['Local_Switch'] = '0cc05e660000'
-  router_list['User_Network'] = None
-  router_list['ACCT_Network'] = None
-  router_list['MGMT_Networ'] = None
-  router_list['IT_Network'] = None
+  router_list['User_Network'] = '0ce0f20b0000'
+  router_list['ACCT_Network'] = '0c4034070000'
+  router_list['MGMT_Networ'] = '0ccc785d0000'
+  router_list['IT_Network'] = '0c1cb2850000'
 
   inventory = dict(all = dict (
     children = dict(
