@@ -1,4 +1,9 @@
+#!/usr/bin/env python3
+
 # import configparser
+
+import configparser
+
 
 #config = configparser.ConfigParser()
 
@@ -18,6 +23,7 @@
 
 #with open('inventory.ini', 'w') as f:
 #    config.write(f)
+
 
 import yaml
 
