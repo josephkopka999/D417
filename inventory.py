@@ -44,9 +44,9 @@ def inventory():
             RAM = '512',
             vCPUs = '1',
             QEMU = '/usr/bin/qemu-system-x86_64(v4.2.1)'
-            Boot_Priority = 'CD/DVD-ROM or HDD'
-            On_close = 'Power off the VM'
-            Console_type = 'telnet'
+            BootPriority = 'CD/DVD-ROM or HDD'
+            OnClose = 'Power off the VM'
+            ConsoleType = 'telnet'
             Adapters = '13'
             Type = 'Realtek 8139 Ethernet (rtl8139)'
             ReplicateNetworkConnectionStatesInQEMU = 'True'
