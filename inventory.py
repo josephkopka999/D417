@@ -2,7 +2,7 @@
 
 # import configparser
 
-import configparser
+#import configparser
 
 
 #config = configparser.ConfigParser()
@@ -49,7 +49,7 @@ def inventory():
   return inventory
 
 def main():
-  with open('/tmp/inventory.yml', 'w') as outfile:
+  with open('/home/student/ansible/D417/inventory.yml', 'w') as outfile:
     yaml.dump(inventory(), outfile, default_flow_style=False)
 
 if __name__ == "__main__":
