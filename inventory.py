@@ -29,17 +29,27 @@ import yaml
 
 def inventory():
 
-  ip_list = {}
-  ip_list['10.25.152.200'] = None
-  ip_list['10.25.152.201'] = None
+  router_list = {}
+  router_list['Local_Switch'] = '0c:c0:5e:66:00:00'
+  router_list['User_Network'] = '0c:e0:f2:0b:00:00'
+  router_list['ACCT_Network'] = '0c:40:34:07:00:00'
+  router_list['MGMT_Networ'] = '0c:cc:78:5d:00:00
+  router_list['IT_Network'] = '0c:1c:b2:85:00:00'
 
   inventory = dict(all = dict (
     children = dict(
-      qa = dict(
-        hosts = ip_list,
+      EXOS = dict(
+        hosts = router_list,
         vars = dict(
-            ansible_ssh_user = 'foo',
-            ansible_ssh_pass = 'bar'
+            RAM = '512',
+            vCPUs = '1',
+            QEMU = '/usr/bin/qemu-system-x86_64(v4.2.1)'
+            Boot_Priority = 'CD/DVD-ROM or HDD'
+            On_close = 'Power off the VM'
+            Console_type = 'telnet'
+            Adapters = '13'
+            Type = 'Realtek 8139 Ethernet (rtl8139)'
+            ReplicateNetworkConnectionStatesInQEMU = 'True'
           )
         )
       )
