@@ -30,11 +30,11 @@ import yaml
 def inventory():
 
   router_list = {}
-  router_list['Local_Switch'] = '0c:c0:5e:66:00:00'
-  router_list['User_Network'] = '0c:e0:f2:0b:00:00'
-  router_list['ACCT_Network'] = '0c:40:34:07:00:00'
-  router_list['MGMT_Networ'] = '0c:cc:78:5d:00:00
-  router_list['IT_Network'] = '0c:1c:b2:85:00:00'
+  router_list['Local_Switch'] = None
+  router_list['User_Network'] = None
+  router_list['ACCT_Network'] = None
+  router_list['MGMT_Networ'] = None
+  router_list['IT_Network'] = None
 
   inventory = dict(all = dict (
     children = dict(
