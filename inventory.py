@@ -43,12 +43,12 @@ def inventory():
         vars = dict(
             RAM = '512',
             vCPUs = '1',
-            QEMU = '/usr/bin/qemu-system-x86_64(v4.2.1)'
-            BootPriority = 'CD/DVD-ROM or HDD'
-            OnClose = 'Power off the VM'
-            ConsoleType = 'telnet'
-            Adapters = '13'
-            Type = 'Realtek 8139 Ethernet (rtl8139)'
+            QEMU = '/usr/bin/qemu-system-x86_64(v4.2.1)',
+            BootPriority = 'CD/DVD-ROM or HDD',
+            OnClose = 'Power off the VM',
+            ConsoleType = 'telnet',
+            Adapters = '13',
+            Type = 'Realtek 8139 Ethernet (rtl8139)',
             ReplicateNetworkConnectionStatesInQEMU = 'True'
           )
         )
