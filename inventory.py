@@ -30,7 +30,7 @@ import yaml
 def inventory():
 
   router_list = {}
-  router_list['Local_Switch'] = None
+  router_list['Local_Switch'] = '0cc05e660000'
   router_list['User_Network'] = None
   router_list['ACCT_Network'] = None
   router_list['MGMT_Networ'] = None
