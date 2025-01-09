@@ -1,15 +1,12 @@
 ---
--name: vlans
- hosts: switches
-
-vars_files: 
-    -vars.yml
-
- tasks:
-  - name: check vlans
-    exos_command:
-      commands: show version
-
-  - name: set vlans
-    exos_command:
-      commands: show version
+- name: Create VLANs on EXOS Layer 3 switches
+  hosts: exos_switches
+  gather_facts: no
+  connection: network_cli
+  tasks:
+    - name: Create VLANS
+      ansible.network.eos_vlan:
+        name: "{{Hostname}}"
+        vlan_id: "{{Vlan}}"
+        state: present
+      register: "vlan_creation"

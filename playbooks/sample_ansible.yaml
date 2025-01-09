@@ -1,6 +1,6 @@
 ---
 - name: ping linux nodes
-  hosts: linux
+  hosts: routers
   tasks:
   - name: ping all linux nodes
     ansible.builtin.ping

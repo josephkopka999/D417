@@ -1,28 +1,54 @@
 linux:
   hosts:
     10.10.1.56:
+      Hostname: "Test_Box_1"
+      new_username: "TestUser1"
+      new_password: "Password: WGU123"
     10.10.1.57:
+      Hostname: "Test_Box_2"
+      new_username: "TestUser2"
+      new_password: "Password: WGU123"
   vars:
+    Default_username: student
     ansible_password: P@ssw0rd
 windows:
   hosts:
     10.10.1.35:
+      Username: "DesktopUser1"
+      Password: "WGU123"
     10.10.1.36:
+      Username: "DesktopUser2"
+      Password: "WGU123"
     10.10.1.43:
+      Username: "DesktopUser3"
+      Password: "WGU123"
     10.10.1.29:
-    10.10.1.28:
+      Username: "DesktopUser4"
+      Password: "WGU123"
   vars:
     ansible_port: 5985
     ansible_user: Administrator
     ansible_password: P@ssw0rd
     ansible_Connection: winrm
-exos:
+exos_switches:
   hosts:
-  # IT_network
     10.10.1.5:
-  # MGMT_Network
+      Hostname: "IT_Network"
+      Vlan: "100"
+      Username: "Local-Admin"
+      Password: "WGU123"
     10.10.1.6:
-  # ACCT_Network
+      Hostname: "MGMT_Network"
+      Vlan: "200"
+      Username: "Local-Admin"
+      Password: "WGU123"
     10.10.1.7:
-  # User_Network
+      Hostname: "ACCT_Network"
+      Vlan: "300"
+      Username: "Local-Admin"
+      Password: "WGU123"
     10.10.1.8:
+      Hostname: "User_network"
+      Vlan: "400"
+      Username: "Local-Admin"
+      Password: "WGU123"

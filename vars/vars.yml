@@ -1,20 +1,5 @@
-LocalSW.ADMPorts: []
-LocalSW.UserPorts: []
-LocalSW.ACCTPorts: []
-LocalSW.MGMTPorts: []
-LocalSW.ITPorts: []
-
-UserSW.ADMPort:
-UserSW.UserPort: 
-
-ACCTSW.ADMPort: 
-ACCTSW.ACCTPort: 
-
-MGMTSW.ADMPort: 
-MGMTSW.MGMTport:
-
-ITSW.ADMPort:
-ITSW.ITPort:
-
-Ansible.ADMport: 
-Ansible.UserPort: 
+vlans:
+  100: 'User_Network'
+  200: 'ACCT_Network'
+  300: 'MGMT_Network'
+  400: 'IT_Network'
