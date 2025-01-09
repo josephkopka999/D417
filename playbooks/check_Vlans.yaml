@@ -1,0 +1,14 @@
+---
+- name: Check VLANs on switches
+  hosts: exos_switches
+  gather_facts: no
+  connection: network_cli
+  tasks:
+    - name: Query existing VLANs
+      ansible.network.eos_vlan:
+        state: query
+      register: vlan_query_result
+
+    - name: Show VLAN information
+      debug:
+        msg: "{{ vlan_query_result }}"
