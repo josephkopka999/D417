@@ -1,18 +1,16 @@
 ---
 - name: Create New Linux Users
   hosts: linux
+  become: yes
   become_method: sudo
   vars:
     ansible_become_password: P@ssw0rd
-
-  
   tasks:
     - name: Hash the password
       set_fact:
         hashed_password: "{{ new_password | password_hash('sha512') }}"
 
 
-  tasks:
     - name: Create new Linux user
       user:
         name: "{{ new_username }}"  
