@@ -1,0 +1,15 @@
+---
+- name: Create New Linux Users
+  hosts: linux
+  become_method: sudo
+  vars:
+    ansible_become_password: P@ssw0rd
+  tasks:
+    - name: Create new Linux user
+      user:
+        name: "{{ new_username }}"  
+        password: "{{ new_password }}"  
+        state: present  
+        comment: "User created for {{ Hostname }}"  
+        shell: /bin/bash  #user home directory
+      when: new_username is defined and new_password is defined

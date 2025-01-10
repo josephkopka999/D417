@@ -1,0 +1,15 @@
+---
+
+- name: Create new accounts on EXOS switches
+  hosts: all_switches
+  gather_facts: no
+  connection: network_cli
+  vars:
+    ansible_network_os: exos
+  tasks:
+    - name: Create user account
+      cli_command:
+        command: "create account {{ Username }} password {{ Password }}"
+      vars:
+        Username: "{{ hostvars[inventory_hostname]['Username'] }}"
+        Password: "{{ hostvars[inventory_hostname]['Password'] }}"
