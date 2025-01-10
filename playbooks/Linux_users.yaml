@@ -1,7 +1,9 @@
 ---
 - name: Create New Linux Users
   hosts: linux
-  become: true  
+  become_method: sudo
+  vars:
+    ansible_become_password: P@ssw0rd
   tasks:
     - name: Create new Linux user
       user:
