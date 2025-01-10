@@ -2,6 +2,12 @@
 - name: Create Windows User Accounts
   hosts: windows
   gather_facts: no
+  become: false
+  vars:
+    ansible_user: Administrator
+    ansible_password: P@ssw0rd
+    ansible_connection: winrm
+    
   tasks:
     - name: Create a new user account
       win_user:
@@ -11,5 +17,11 @@
         groups:
           - "Users" 
           - "Administrators"  
-        comment: "Test User Account"  
+        password_never_expires: yes  
         update_password: always
+
+  - name: Debug user details
+  debug:
+    msg:
+      - "Username: {{ username }}"
+      - "Password: {{ password }}"
