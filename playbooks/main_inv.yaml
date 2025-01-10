@@ -64,5 +64,5 @@ local_switch:
 
 all_switches:
   children:
-    local_switch
-    exos_switches
+    local_switch:
+    exos_switches:
