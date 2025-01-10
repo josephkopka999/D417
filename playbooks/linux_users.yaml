@@ -10,6 +10,6 @@
         name: "{{ new_username }}"  
         password: "{{ new_password }}"  
         state: present  
-        comment: "User created for {{ Hostname }}"  
+        comment: "User created for {{ hostname }}"  
         shell: /bin/bash  #user home directory
       when: new_username is defined and new_password is defined

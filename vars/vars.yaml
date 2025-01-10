@@ -1,0 +1,5 @@
+vlans:
+  100: 'User_Network'
+  200: 'ACCT_Network'
+  300: 'MGMT_Network'
+  400: 'IT_Network'
