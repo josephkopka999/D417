@@ -16,7 +16,7 @@
     - name: Create new Linux user
       user:
         name: "{{ new_username }}"  
-        password: "{{ new_password }}"  
+        password: "{{ hashed_password }}"  
         state: present  
         comment: "User created for {{ hostname }}"  
         shell: /bin/bash  #user home directory
