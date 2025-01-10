@@ -5,7 +5,7 @@
   tasks:
     - name: Create a new user account
       win_user:
-        name: "{{ Username }}"          
+        name: "{{ username }}"          
         password: "{{ password }}"  
         state: present  
         groups:
