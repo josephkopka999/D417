@@ -9,7 +9,7 @@
   tasks:
     - name: Create user account
       cli_command:
-        command: "create account {{ Username }} password {{ Password }}"
+        command: "create account {{ username }} password {{ password }}"
       vars:
-        Username: "{{ hostvars[inventory_hostname]['Username'] }}"
-        Password: "{{ hostvars[inventory_hostname]['Password'] }}"
+        Username: "{{ hostvars[inventory_hostname]['username'] }}"
+        Password: "{{ hostvars[inventory_hostname]['password'] }}"
