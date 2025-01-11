@@ -1,4 +1,4 @@
----
+  ---
 - name: Create VLANs on EXOS Layer 3 switches
   hosts: exos_switches
   gather_facts: no
@@ -8,22 +8,15 @@
     password: "{{ ansible_password }}"
     ansible_network_os: exos
   tasks:
-    -name: create Vlans
+    - name: Create VLANs
       cli_command:
         command: "create vlan {{ vlan_name }} id {{ vlan_id }}"
-    vars:
-      vlan_name: "{{ hostname }}"
-      vlan_id: "{{ vlan }}"
-   # - name: Create VLANS
-   #   ansible.network.eos_vlan:
-   #     name: "{{hostname}}"
-   #     vlan_id: "{{vlan}}"
-   #     state: present
-   #   register: "vlan_creation"
+      vars:
+        vlan_name: "{{ hostname }}"
+        vlan_id: "{{ vlan }}"
     
     - name: Show information
       debug:
         msg:
-          - "Username: {{ new_username }}"
-          - "Password: {{ new_password }}"
-  
+          - "Username: {{ ansible_user }}"
+          - "Password: {{ ansible_password }}"
