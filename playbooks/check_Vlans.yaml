@@ -1,20 +1,20 @@
 ---
-- name: Check VLANs on switches
+- name: Get VLAN information from EXOS switches
   hosts: exos_switches
   gather_facts: no
-  connection: network_cli
+  connection: ansible.netcommon.network_cli
   vars:
+    ansible_network_os: exos
     username: "{{ ansible_user }}"
     password: "{{ ansible_password }}"
-    ansible_network_os: exos
   tasks:
-    - name: Query existing VLANs
-      arista.eos.eos_vlans:
-        state: gathered
-      register: vlan_query_result
+    - name: Retrieve VLAN configuration
+      cli_command:
+        command: "show vlan"
+      register: vlan_output
 
-    - name: Show VLAN information
+    - name: Display VLAN information
       debug:
-        msg: "{{ vlan_query_result }}"
-        msg: "{{ ansible_user }}"
-        msg: "{{ ansible_password }}"
+        msg:
+          - "VLANs on {{ inventory_hostname }}:"
+          - "{{ vlan_output.stdout_lines }}"
