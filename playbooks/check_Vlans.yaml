@@ -16,3 +16,5 @@
     - name: Show VLAN information
       debug:
         msg: "{{ vlan_query_result }}"
+        msg: "{{ ansible_user }}"
+        msg: "{{ ansible_password }}"

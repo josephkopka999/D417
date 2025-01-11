@@ -14,3 +14,9 @@
         vlan_id: "{{Vlan}}"
         state: present
       register: "vlan_creation"
+    
+    - name: Show VLAN information
+      debug:
+        msg: "{{ ansible_user }}"
+        msg: "{{ ansible_password }}"
+  

@@ -15,3 +15,8 @@
       vars:
         Username: "{{ hostvars[inventory_hostname]['username'] }}"
         Password: "{{ hostvars[inventory_hostname]['password'] }}"
+        
+    - name: Show VLAN information
+      debug:
+        msg: "{{ ansible_user }}"
+        msg: "{{ ansible_password }}"
