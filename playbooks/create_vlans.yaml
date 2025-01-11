@@ -11,7 +11,7 @@
     - name: check variable
       debug:
         msg:
-          - "Creating VLAN {{ vlan_name }} with ID {{ vlan_id }} on {{ inventory_hostname }}"
+          - "Creating VLAN {{ hostname }} with ID {{ vlan }} on {{ hostname }}"
     - name: Create VLANs
       cli_command:
         command: "create vlan {{ vlan_name }} tag {{ vlan_id }}"
