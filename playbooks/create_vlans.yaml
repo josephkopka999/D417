@@ -8,12 +8,18 @@
     password: "{{ ansible_password }}"
     ansible_network_os: exos
   tasks:
-    - name: Create VLANS
-      ansible.network.eos_vlan:
-        name: "{{Hostname}}"
-        vlan_id: "{{Vlan}}"
-        state: present
-      register: "vlan_creation"
+    -name: create Vlans
+      cli_command:
+        command: "create vlan {{ vlan_name }} id {{ vlan_id }}"
+    vars"
+      vlan_name: "{{ hostname }}"
+      vlan_id: "{{ vlan }}"
+   # - name: Create VLANS
+   #   ansible.network.eos_vlan:
+   #     name: "{{hostname}}"
+   #     vlan_id: "{{vlan}}"
+   #     state: present
+   #   register: "vlan_creation"
     
     - name: Show information
       debug:
