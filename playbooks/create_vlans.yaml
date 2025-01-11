@@ -24,3 +24,6 @@
         msg:
           - "Username: {{ ansible_user }}"
           - "Password: {{ ansible_password }}"
+    - name: Save configuration
+      cli_command:
+        command: "save config"
