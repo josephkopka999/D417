@@ -11,7 +11,7 @@
     -name: create Vlans
       cli_command:
         command: "create vlan {{ vlan_name }} id {{ vlan_id }}"
-    vars"
+    vars:
       vlan_name: "{{ hostname }}"
       vlan_id: "{{ vlan }}"
    # - name: Create VLANS
