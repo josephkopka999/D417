@@ -52,7 +52,7 @@ exos_switches:
       vlan: "400" 
   vars: 
     ansible_user: admin
-    ansible_password: ""
+    ansible_password: null
     new_username: "Local-Admin"
     new_password: "WGU123"
     ansible_ssh_common_args: '-o PubkeyAuthentication=no -o StrictHostKeyChecking=no'
@@ -63,7 +63,7 @@ local_switch:
       ansible_host: 10.10.1.3
       hostname: "Local_Switch"
       ansible_user: admin
-      ansible_password: ""
+      ansible_password: null
       new_username: "Local-Admin"
       new_password: "WGU123"
       ansible_ssh_common_args: '-o PubkeyAuthentication=no -o StrictHostKeyChecking=no'
