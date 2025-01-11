@@ -38,38 +38,24 @@ exos_switches:
       ansible_host: 10.10.1.5
       hostname: "IT_Network"
       vlan: "100"
-      ansible_user: admin
-      ansible_password: "" 
-      username: "Local-Admin"
-      password: "WGU123"
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     10.10.1.6:
       ansible_host: 10.10.1.6
       hostname: "MGMT_Network"
       vlan: "200"
-      ansible_user: admin
-      ansible_password: ""
-      username: "Local-Admin"
-      password: "WGU123"
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     10.10.1.7:
       ansible_host: 10.10.1.7
       hostname: "ACCT_Network"
       vlan: "300"
-      ansible_user: admin
-      ansible_password: ""
-      username: "Local-Admin"
-      password: "WGU123"
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
     10.10.1.8:
       ansible_host: 10.10.1.8
       hostname: "User_network"
-      vlan: "400"
-      ansible_user: admin
-      ansible_password: ""
-      username: "Local-Admin"
-      password: "WGU123"
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+      vlan: "400" 
+  vars: 
+    ansible_user: admin
+    ansible_password: ""
+    new_username: "Local-Admin"
+    new_password: "WGU123"
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
 local_switch:
   hosts:
@@ -78,8 +64,8 @@ local_switch:
       hostname: "Local_Switch"
       ansible_user: admin
       ansible_password: ""
-      username: "Local-Admin"
-      password: "WGU123"
+      new_username: "Local-Admin"
+      new_password: "WGU123"
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
 all_switches:
