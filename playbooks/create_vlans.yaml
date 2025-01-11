@@ -8,9 +8,13 @@
     password: "{{ ansible_password }}"
     ansible_network_os: exos
   tasks:
+    - name: check variable
+      debug:
+        msg:
+          - "Creating VLAN {{ vlan_name }} with ID {{ vlan_id }} on {{ inventory_hostname }}"
     - name: Create VLANs
       cli_command:
-        command: "create vlan {{ vlan_name }} id {{ vlan_id }}"
+        command: "create vlan {{ vlan_name }} tag {{ vlan_id }}"
       vars:
         vlan_name: "{{ hostname }}"
         vlan_id: "{{ vlan }}"
