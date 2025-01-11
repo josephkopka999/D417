@@ -4,6 +4,7 @@
   hosts: all_switches
   gather_facts: no
   connection: network_cli
+  host_key_auto_add: true
   vars:
     ansible_network_os: exos
   tasks:
