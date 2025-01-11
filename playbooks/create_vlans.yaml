@@ -1,4 +1,4 @@
-  ---
+---
 - name: Create VLANs on EXOS Layer 3 switches
   hosts: exos_switches
   gather_facts: no
