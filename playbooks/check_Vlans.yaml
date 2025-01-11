@@ -5,7 +5,7 @@
   connection: network_cli
   tasks:
     - name: Query existing VLANs
-      ansible.network.eos_vlan:
+      arista.eos.eos_vlans:
         state: query
       register: vlan_query_result
 
