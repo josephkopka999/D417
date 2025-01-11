@@ -3,7 +3,7 @@
 - name: Create new accounts on EXOS switches
   hosts: all_switches
   gather_facts: no
-  connection: network_cli
+  connection: cli
   vars:
     ansible_network_os: exos
   tasks:
