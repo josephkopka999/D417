@@ -2,7 +2,7 @@
 - name: Create VLANs on EXOS Layer 3 switches
   hosts: exos_switches
   gather_facts: no
-  connection: network_cli
+  connection: ansible.netcommon.network_cli
   vars:
     username: "{{ ansible_user }}"
     password: "{{ ansible_password }}"
