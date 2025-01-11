@@ -10,5 +10,5 @@
   tasks:
     - name: Create a new user account
       cli_command:
-        command: "create account {{ new_username }} password {{ new_password }}"
+        command: "create account admin {{ new_username }} {{ new_password }}"
 
