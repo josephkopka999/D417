@@ -3,6 +3,8 @@
   hosts: exos_switches
   gather_facts: no
   connection: network_cli
+  vars:
+    ansible_network_os: exos
   tasks:
     - name: Query existing VLANs
       arista.eos.eos_vlans:
