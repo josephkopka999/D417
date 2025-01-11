@@ -1,6 +1,4 @@
 ---
-
----
 - name: Create new accounts on EXOS switches
   hosts: exos_switches
   gather_facts: no
