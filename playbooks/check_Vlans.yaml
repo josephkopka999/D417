@@ -8,7 +8,7 @@
   tasks:
     - name: Query existing VLANs
       arista.eos.eos_vlans:
-        state: query
+  #      state: query
       register: vlan_query_result
 
     - name: Show VLAN information
