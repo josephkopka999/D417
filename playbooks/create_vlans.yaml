@@ -2,11 +2,28 @@
 - name: Create VLANs on EXOS Layer 3 switches
   hosts: exos_switches
   gather_facts: no
-  connection: network_cli
+  connection: ansible.netcommon.network_cli
+  vars:
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    ansible_network_os: exos
   tasks:
-    - name: Create VLANS
-      ansible.network.eos_vlan:
-        name: "{{Hostname}}"
-        vlan_id: "{{Vlan}}"
-        state: present
-      register: "vlan_creation"
+    - name: check variable
+      debug:
+        msg:
+          - "Creating VLAN {{ hostname }} with ID {{ vlan }} on {{ hostname }}"
+    - name: Create VLANs
+      cli_command:
+        command: "create vlan {{ vlan_name }} tag {{ vlan_id }}"
+      vars:
+        vlan_name: "{{ hostname }}"
+        vlan_id: "{{ vlan }}"
+    
+    - name: Show information
+      debug:
+        msg:
+          - "Username: {{ ansible_user }}"
+          - "Password: {{ ansible_password }}"
+    - name: Save configuration
+      cli_command:
+        command: "save config"
