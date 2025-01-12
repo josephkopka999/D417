@@ -1,0 +1,19 @@
+all:
+  children:
+    EXOS:
+      hosts:
+        ACCT_Network: 0c4034070000
+        IT_Network: 0c1cb2850000
+        Local_Switch: 0cc05e660000
+        MGMT_Networ: 0ccc785d0000
+        User_Network: 0ce0f20b0000
+      vars:
+        Adapters: '13'
+        BootPriority: CD/DVD-ROM or HDD
+        ConsoleType: telnet
+        OnClose: Power off the VM
+        QEMU: /usr/bin/qemu-system-x86_64(v4.2.1)
+        RAM: '512'
+        ReplicateNetworkConnectionStatesInQEMU: 'True'
+        Type: Realtek 8139 Ethernet (rtl8139)
+        vCPUs: '1'
