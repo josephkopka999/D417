@@ -1,6 +1,6 @@
 ---
 - name: Create new accounts on EXOS switches
-  hosts: exos_switches
+  hosts: all_switches
   gather_facts: no
   connection: ansible.netcommon.network_cli
   vars:
