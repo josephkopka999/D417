@@ -6,7 +6,7 @@ def check_vlans(switch_ip, username, password):
         # Establish an SSH connection
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(switch_ip, username=username, password=password, allow_agent=False, look_for_Keys=False)
+        ssh.connect(switch_ip, username=username, password=password, allow_agent=False, look_for_keys=False)
 
         # Execute the 'show vlan' command
         stdin, stdout, stderr = ssh.exec_command("show vlan")

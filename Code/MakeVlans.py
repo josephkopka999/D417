@@ -6,7 +6,7 @@ def create_vlan(switch_ip, username, password, vlan_name, vlan_id):
         # Establish an SSH connection
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(switch_ip, username=username, password=password, allow_agent=False, look_for_Keys=False)
+        ssh.connect(switch_ip, username=username, password=password, allow_agent=False, look_for_keys=False)
 
         # Construct the command to create the VLAN
         command = f"create vlan {vlan_name} tag {vlan_id}"
