@@ -26,13 +26,14 @@ def check_vlans(switch_ip, username, password):
     except Exception as e:
         print(f"Error connecting to {switch_ip}: {e}")
 
+
 # List of switches and credentials
 switches = [
-{"ip": "10.10.1.5", "username": "admin", "password": "password"},
-{"ip": "10.10.1.6", "username": "admin", "password": "password"},
-{"ip": "10.10.1.7", "username": "admin", "password": "password"},
-{"ip": "10.10.1.8", "username": "admin", "password": "password"},
-{"ip": "10.10.1.24", "username": "admin", "password": "password"}
+    {"ip": "10.10.1.5", "username": "admin", "password": "password"},
+    {"ip": "10.10.1.6", "username": "admin", "password": "password"},
+    {"ip": "10.10.1.7", "username": "admin", "password": "password"},
+    {"ip": "10.10.1.8", "username": "admin", "password": "password"},
+    {"ip": "10.10.1.24", "username": "admin", "password": "password"}
 ]
 
 # Loop through each switch and check VLANs
