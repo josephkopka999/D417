@@ -50,8 +50,8 @@ exos_switches:
       hostname: "ACCT_Network"
       vlan: "300"
     10.10.1.22:
-      ansible_host: 10.10.1.8
-      # ansible_host: 10.10.1.22
+      # ansible_host: 10.10.1.8
+      ansible_host: 10.10.1.22
       hostname: "User_network"
       vlan: "400" 
   vars: 
